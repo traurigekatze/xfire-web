@@ -28,6 +28,7 @@ public class HelloServiceImpl implements HelloService {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+        System.out.println(String.format("random sleep time:{}", sleep));
         return info == null ? "" : JSON.toJSONString(info);
     }
 
