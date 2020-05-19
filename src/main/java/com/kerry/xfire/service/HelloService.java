@@ -29,4 +29,12 @@ public interface HelloService {
      */
     Integer add(String abbr, String name, Integer age, String sex);
 
+    /**
+     * nciic check
+      * @param inLicense
+     * @param inConditions
+     * @return
+     */
+    String nciicCheck(String inLicense, String inConditions);
+
 }

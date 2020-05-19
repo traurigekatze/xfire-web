@@ -1,6 +1,7 @@
 package com.kerry.xfire.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.kerry.xfire.common.CitizenInfo;
 import com.kerry.xfire.common.UserInfo;
 import com.kerry.xfire.domain.User;
 import com.kerry.xfire.service.HelloService;
@@ -19,6 +20,8 @@ public class HelloServiceImpl implements HelloService {
 
     private UserInfo userInfo = new UserInfo();
 
+    private CitizenInfo citizenInfo = new CitizenInfo();
+
     @Override
     public String getInfo(String abbr) {
         User info = userInfo.getInfo(abbr);
@@ -28,7 +31,7 @@ public class HelloServiceImpl implements HelloService {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-        System.out.println(String.format("random sleep time:{}", sleep));
+        System.out.println(String.format("getInfo random sleep time:{}", sleep));
         return info == null ? "" : JSON.toJSONString(info);
     }
 
@@ -47,5 +50,19 @@ public class HelloServiceImpl implements HelloService {
         User user = new User(abbr, name, age, sex);
         return userInfo.add(user);
     }
+
+    @Override
+    public String nciicCheck(String inLicense, String inConditions) {
+        Long sleep = RandomUtils.nextLong(700, 900);
+        try {
+            TimeUnit.MILLISECONDS.sleep(sleep);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(String.format("nciic check random sleep time:{}", sleep));
+        return citizenInfo.getInfo();
+    }
+
 
 }
