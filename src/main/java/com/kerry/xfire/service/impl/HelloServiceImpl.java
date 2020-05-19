@@ -25,13 +25,13 @@ public class HelloServiceImpl implements HelloService {
     @Override
     public String getInfo(String abbr) {
         User info = userInfo.getInfo(abbr);
-        Long sleep = RandomUtils.nextLong(700, 900);
+        Long sleep = RandomUtils.nextLong(800, 950);
         try {
 			TimeUnit.MILLISECONDS.sleep(sleep);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-        System.out.println(String.format("getInfo random sleep time:{}", sleep));
+        System.out.println(String.format("getInfo random sleep time:%s", sleep));
         return info == null ? "" : JSON.toJSONString(info);
     }
 
@@ -60,7 +60,7 @@ public class HelloServiceImpl implements HelloService {
             e.printStackTrace();
         }
 
-        System.out.println(String.format("nciic check random sleep time:{}", sleep));
+        System.out.println(String.format("nciic check random sleep time:%s", sleep));
         return citizenInfo.getInfo();
     }
 
