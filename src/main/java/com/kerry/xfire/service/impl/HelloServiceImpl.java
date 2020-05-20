@@ -53,7 +53,7 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String nciicCheck(String inLicense, String inConditions) {
-        Long sleep = RandomUtils.nextLong(700, 900);
+        Long sleep = RandomUtils.nextLong(800, 950);
         try {
             TimeUnit.MILLISECONDS.sleep(sleep);
         } catch (InterruptedException e) {
