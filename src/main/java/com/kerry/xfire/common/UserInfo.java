@@ -2,9 +2,7 @@ package com.kerry.xfire.common;
 
 import com.kerry.xfire.domain.User;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author kerryhe
@@ -39,7 +37,7 @@ public class UserInfo {
      * @return
      */
     public List<User> getAll() {
-        return (List<User>) all_user.values();
+        return new ArrayList<>(all_user.values());
     }
 
     /**
