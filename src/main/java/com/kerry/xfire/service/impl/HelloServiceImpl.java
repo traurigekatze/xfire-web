@@ -9,7 +9,9 @@ import com.kerry.xfire.service.HelloService;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,6 +23,13 @@ public class HelloServiceImpl implements HelloService {
     private UserInfo userInfo = new UserInfo();
 
     private CitizenInfo citizenInfo = new CitizenInfo();
+
+    private static Map<String, Integer> map = new HashMap<>();
+
+    static {
+        map.put("start", 500);
+        map.put("end", 900);
+    }
 
     @Override
     public String getInfo(String abbr) {
@@ -53,7 +62,9 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String nciicCheck(String inLicense, String inConditions) {
-        Long sleep = RandomUtils.nextLong(800, 950);
+        Integer start = map.get("start");
+        Integer end = map.get("end");
+        Long sleep = RandomUtils.nextLong(start, end);
         try {
             TimeUnit.MILLISECONDS.sleep(sleep);
         } catch (InterruptedException e) {
@@ -64,5 +75,14 @@ public class HelloServiceImpl implements HelloService {
         return citizenInfo.getInfo();
     }
 
+    @Override
+    public void reload(Integer start, Integer end) {
+        if (start != null && start < map.get("end")) {
+            map.put("start", start);
+        }
+        if (end != null && start > map.get("start")) {
+            map.put("end", end);
+        }
+    }
 
 }

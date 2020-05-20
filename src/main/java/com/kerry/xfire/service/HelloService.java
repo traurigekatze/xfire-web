@@ -37,4 +37,11 @@ public interface HelloService {
      */
     String nciicCheck(String inLicense, String inConditions);
 
+    /**
+     * reload
+     * @param start
+     * @param end
+     */
+    void reload(Integer start, Integer end);
+
 }
