@@ -6,12 +6,14 @@ import com.kerry.xfire.common.UserInfo;
 import com.kerry.xfire.domain.User;
 import com.kerry.xfire.service.HelloService;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
