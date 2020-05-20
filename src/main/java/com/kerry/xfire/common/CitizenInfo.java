@@ -27,7 +27,6 @@ public class CitizenInfo {
     public String getInfo() {
         int i = RandomUtils.nextInt(1, 100);
         int index = i % all_citizen.size();
-        System.out.println(index);
         return all_citizen.get(index);
     }
 
