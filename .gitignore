@@ -1,0 +1,21 @@
+.classpath
+.project
+.settings/
+log/
+target/
+.idea/
+project.iml
+sonar-project.properties
+.scannerwork/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.myumldata
+/risk.iml
+.DS_Store
+
