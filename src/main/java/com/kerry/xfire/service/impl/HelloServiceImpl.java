@@ -79,11 +79,13 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public void reload(Integer start, Integer end) {
-        if (start != null && start < map.get("end")) {
+        System.out.println(String.format("start:%s,end:%s", start, end));
+        if (start != null && end != null && start < end) {
             map.put("start", start);
-        }
-        if (end != null && start > map.get("start")) {
             map.put("end", end);
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(String.format("test random %s:%s", i, RandomUtils.nextLong(map.get("start"), map.get("end"))));
         }
     }
 
