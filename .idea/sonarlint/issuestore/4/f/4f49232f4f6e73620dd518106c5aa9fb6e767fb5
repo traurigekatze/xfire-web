@@ -1,5 +1,5 @@
 
-C
-java:S1481"&Remove this unused "c" local variable.(ÑëÛ“8áš—´¢.
 p
-java:S3008"SRename this field "all_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ñ‹„8ïïƒ´¢.
+java:S3008"SRename this field "all_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ñ‹„8ˆÃØÜ¢.
+C
+java:S1481"&Remove this unused "c" local variable.(ÑëÛ“8ˆÃØÜ¢.

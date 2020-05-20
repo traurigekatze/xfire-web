@@ -1,2 +1,16 @@
 
-U	java:S106""9Replace this use of System.out or System.err by a logger.(¦È´Â8¹ùå´¢.
+B
+java:S3457?"%String contains no format specifiers.(Ûú‘×8¤¤–Ý¢.
+E
+java:S1148 "#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8é»ØÜ¢.
+c
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‚¸”Ý¢.
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(¦È´Â8‚¸”Ý¢.
+G
+java:S3457""%String contains no format specifiers.(ÓŒÞ•ÿÿÿÿÿ8‚¸”Ý¢.
+c
+java:S2142;"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8‚¸”Ý¢.
+E
+java:S1148<"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‡ÛúÜ¢.
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ÓŒÞ•ÿÿÿÿÿ8‚¸”Ý¢.
+U	java:S106?"9Replace this use of System.out or System.err by a logger.(Ûú‘×8¤¤–Ý¢.
