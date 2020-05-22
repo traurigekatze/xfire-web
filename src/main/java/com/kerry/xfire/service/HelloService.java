@@ -38,6 +38,14 @@ public interface HelloService {
     String nciicCheck(String inLicense, String inConditions);
 
     /**
+     * nciic compare
+     * @param inLicense
+     * @param inConditions
+     * @return
+     */
+    String nciicCompare(String inLicense, String inConditions);
+
+    /**
      * reload
      * @param start
      * @param end

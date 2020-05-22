@@ -6,14 +6,12 @@ import com.kerry.xfire.common.UserInfo;
 import com.kerry.xfire.domain.User;
 import com.kerry.xfire.service.HelloService;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -75,6 +73,21 @@ public class HelloServiceImpl implements HelloService {
 
         System.out.println(String.format("nciic check random sleep time:%s", sleep));
         return citizenInfo.getInfo();
+    }
+
+    @Override
+    public String nciicCompare(String inLicense, String inConditions) {
+        Integer start = map.get("start");
+        Integer end = map.get("end");
+        Long sleep = RandomUtils.nextLong(start, end);
+        try {
+            TimeUnit.MILLISECONDS.sleep(sleep);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(String.format("nciic compare random sleep time:%s", sleep));
+        return citizenInfo.getCompare();
     }
 
     @Override
