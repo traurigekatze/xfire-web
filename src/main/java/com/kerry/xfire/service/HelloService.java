@@ -52,4 +52,11 @@ public interface HelloService {
      */
     void reload(Integer start, Integer end);
 
+    /**
+     * reloadC
+     * @param start
+     * @param end
+     */
+    void reloadC(Integer start, Integer end);
+
 }

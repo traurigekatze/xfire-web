@@ -29,6 +29,10 @@ public class HelloServiceImpl implements HelloService {
     static {
         map.put("start", 500);
         map.put("end", 900);
+
+
+        map.put("c_start", 500);
+        map.put("c_end", 900);
     }
 
     @Override
@@ -96,6 +100,18 @@ public class HelloServiceImpl implements HelloService {
         if (start != null && end != null && start < end) {
             map.put("start", start);
             map.put("end", end);
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(String.format("test random %s:%s", i, RandomUtils.nextLong(map.get("start"), map.get("end"))));
+        }
+    }
+
+    @Override
+    public void reloadC(Integer start, Integer end) {
+        System.out.println(String.format("start:%s,end:%s", start, end));
+        if (start != null && end != null && start < end) {
+            map.put("c_start", start);
+            map.put("c_end", end);
         }
         for (int i = 0; i < 5; i++) {
             System.out.println(String.format("test random %s:%s", i, RandomUtils.nextLong(map.get("start"), map.get("end"))));
