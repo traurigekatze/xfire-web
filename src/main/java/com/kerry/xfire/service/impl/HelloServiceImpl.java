@@ -81,8 +81,8 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String nciicCompare(String inLicense, String inConditions) {
-        Integer start = map.get("start");
-        Integer end = map.get("end");
+        Integer start = map.get("c_start");
+        Integer end = map.get("c_end");
         Long sleep = RandomUtils.nextLong(start, end);
         try {
             TimeUnit.MILLISECONDS.sleep(sleep);
@@ -114,7 +114,7 @@ public class HelloServiceImpl implements HelloService {
             map.put("c_end", end);
         }
         for (int i = 0; i < 5; i++) {
-            System.out.println(String.format("test random %s:%s", i, RandomUtils.nextLong(map.get("start"), map.get("end"))));
+            System.out.println(String.format("test random %s:%s", i, RandomUtils.nextLong(map.get("c_start"), map.get("c_end"))));
         }
     }
 
